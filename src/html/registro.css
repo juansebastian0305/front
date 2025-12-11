@@ -1,0 +1,126 @@
+/* === Reset básico === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.from{
+  background: linear-gradient(135deg, #081136, #25103a);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Contenedor principal de formularios === */
+.form-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Títulos === */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* === Labels e inputs === */
+form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #444;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.5);
+}
+
+/* === Botones === */
+form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover:not(:disabled) {
+  background: #5563d6;
+  transform: translateY(-2px);
+}
+
+form button:disabled {
+  background: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* === Mensajes === */
+.mensaje {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #d63031;
+}
+
+.mensaje:contains("✅") {
+  color: #2ecc71;
+}
+
+/* === Texto secundario === */
+.muted {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.muted a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.muted a:hover {
+  text-decoration: underline;
+}
